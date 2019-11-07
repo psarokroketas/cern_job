@@ -1,0 +1,14 @@
+This is a pythos script that was used as a collectd plugin for a project.
+
+It counts how many sessions are : 
+-> in cern 
+-> out of cern
+-> how many are active sessions in total
+
+
+This was also connected with puppet language script : 
+
+
+<Plugin "python"> ModulePath "/usr/libexec/sensors" LogTraces true Interactive false Import "puppet" Import "session" <Module "session">
+
+<Module "puppet"> Interval "60" <Module "session"> Domains "localhost" "cern.ch"
